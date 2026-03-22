@@ -4,10 +4,10 @@ const FOOTER_DATA = {
   whatsapp: "5581997243724",
   email:    "techsocompany@gmail.com",
   socials: [
-    { label:"Instagram", short:"IG", url:"https://www.instagram.com/techsolution.company/" },
-    { label:"YouTube",   short:"YT", url:"https://www.youtube.com/@technologySolutionCompany" },
-    { label:"GitHub",    short:"GH", url:"https://github.com/TechnologySolutionCompany" },
-    { label:"Discord",   short:"DC", url:"https://discord.gg/K7HHTSaz5A" },
+    { label:"Instagram", icon:"https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/instagram.svg", url:"https://www.instagram.com/techsolution.company/" },
+    { label:"YouTube",   icon:"https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/youtube.svg",   url:"https://www.youtube.com/@technologySolutionCompany" },
+    { label:"GitHub",    icon:"https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/github.svg",    url:"https://github.com/TechnologySolutionCompany" },
+    { label:"Discord",   icon:"https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/discord.svg",   url:"https://discord.gg/K7HHTSaz5A" },
   ],
   links: [
     { label:"Início",      href:"/" },
@@ -73,15 +73,17 @@ export default function Footer() {
               <img src="/logo.png" alt="TSC" style={{width:"36px",height:"36px",objectFit:"contain"}}
                 onError={e=>e.target.style.display="none"}/>
               <span style={{ fontFamily: "'Syne',sans-serif", fontWeight: 800, fontSize: "0.95rem", color: "var(--text-primary)" }}>
-              TSC <span style={{ color: "var(--brand)" }}>Brasil</span>
-            </span>
+                TSC <span style={{ color: "var(--brand)" }}>Brasil</span>
+              </span>
             </div>
             <p style={{fontSize:".875rem",color:"var(--text-secondary)",lineHeight:1.7,maxWidth:"260px",marginBottom:"1.25rem"}}>
               {FOOTER_DATA.tagline}
             </p>
             <div style={{display:"flex",gap:".5rem",flexWrap:"wrap"}}>
               {FOOTER_DATA.socials.map(s=>(
-                <a key={s.short} href={s.url} target="_blank" rel="noopener noreferrer" className="footer-soc" aria-label={s.label}>{s.short}</a>
+                <a key={s.label} href={s.url} target="_blank" rel="noopener noreferrer" className="footer-soc" aria-label={s.label}>
+                    <img src={s.icon} alt={s.label} style={{width:"14px",height:"14px",filter:"var(--icon-filter)",opacity:0.75}}/>
+                  </a>
               ))}
             </div>
           </div>

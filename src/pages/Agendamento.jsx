@@ -160,7 +160,7 @@ export default function Agendamento() {
                   <div style={{fontSize:".845rem",color:"var(--text-secondary)",marginBottom:"1.75rem"}}>Todos os campos são necessários para melhor atendê-lo(a).</div>
 
                   <div className="hint-box">
-                    <span>💬</span>
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/whatsapp.svg" alt="WhatsApp" style={{width:"16px",height:"16px",filter:"var(--icon-filter)",opacity:0.75,flexShrink:0,marginTop:"1px"}}/>
                     <span>Ao clicar em <strong>Enviar pelo WhatsApp</strong>, você será redirecionado com a mensagem já preenchida.</span>
                   </div>
 
@@ -214,7 +214,10 @@ export default function Agendamento() {
                     {errors.message&&<span className="form-error">{errors.message}</span>}
                   </div>
 
-                  <button className="submit-btn" onClick={submit}>Enviar pelo WhatsApp</button>
+                  <button className="submit-btn" onClick={submit}>
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/whatsapp.svg" alt="WhatsApp" style={{width:"18px",height:"18px",filter:"brightness(0) invert(1)",flexShrink:0}}/>
+                    Enviar pelo WhatsApp
+                  </button>
                 </>
               )}
             </div>

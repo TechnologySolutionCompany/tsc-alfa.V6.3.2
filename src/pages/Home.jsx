@@ -189,8 +189,15 @@ export default function Home() {
                 <a href="/agendamento" className="btn btn-ghost">Agendar Call</a>
               </div>
               <div className="hero-socials">
-                {[{s:"IG",u:"https://www.instagram.com/techsolution.company/"},{s:"YT",u:"https://www.youtube.com/@technologySolutionCompany"},{s:"GH",u:"https://github.com/TechnologySolutionCompany"},{s:"DC",u:"https://discord.gg/K7HHTSaz5A"}].map(x=>(
-                  <a key={x.s} href={x.u} target="_blank" rel="noopener noreferrer" className="soc-btn">{x.s}</a>
+                {[
+                  {s:"Instagram",i:"https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/instagram.svg",u:"https://www.instagram.com/techsolution.company/"},
+                  {s:"YouTube",i:"https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/youtube.svg",u:"https://www.youtube.com/@technologySolutionCompany"},
+                  {s:"GitHub",i:"https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/github.svg",u:"https://github.com/TechnologySolutionCompany"},
+                  {s:"Discord",i:"https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/discord.svg",u:"https://discord.gg/K7HHTSaz5A"}
+                ].map(x=>(
+                  <a key={x.s} href={x.u} target="_blank" rel="noopener noreferrer" className="soc-btn" aria-label={x.s}>
+                    <img src={x.i} alt={x.s} style={{width:"14px",height:"14px",filter:"var(--icon-filter)",opacity:0.75}}/>
+                  </a>
                 ))}
               </div>
             </div>

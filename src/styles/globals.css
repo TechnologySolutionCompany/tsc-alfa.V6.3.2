@@ -12,6 +12,7 @@
   --brand-glow:     rgba(16,191,225,0.14);
   --brand-2:        #1f2334;
   --text-primary:   #f0f2f8;
+  --icon-filter:    invert(1);
   --text-secondary: #8b93a8;
   --text-muted:     #4e5668;
   --text-invert:    #0e1117;
@@ -37,6 +38,7 @@
   --brand-glow:     rgba(16,191,225,0.10);
   --brand-2:        #1f2334;
   --text-primary:   #0e1117;
+  --icon-filter:    invert(0);
   --text-secondary: #4a5468;
   --text-muted:     #8b93a8;
   --text-invert:    #f0f2f8;

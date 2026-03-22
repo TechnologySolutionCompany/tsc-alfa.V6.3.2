@@ -72,10 +72,9 @@ export default function Footer() {
             <div style={{display:"flex",alignItems:"center",gap:".6rem",marginBottom:".875rem"}}>
               <img src="/logo.png" alt="TSC" style={{width:"36px",height:"36px",objectFit:"contain"}}
                 onError={e=>e.target.style.display="none"}/>
-              <span style={{fontFamily:"'Syne',sans-serif",fontWeight:800,fontSize:".95rem"}}>
-                <span style={{color:"#ffffff"}}>TSC</span>
-                <span style={{color:"var(--brand)"}}> Br</span>
-              </span>
+              <span style={{ fontFamily: "'Syne',sans-serif", fontWeight: 800, fontSize: "0.95rem", color: "var(--text-primary)" }}>
+              TSC <span style={{ color: "var(--brand)" }}>Brasil</span>
+            </span>
             </div>
             <p style={{fontSize:".875rem",color:"var(--text-secondary)",lineHeight:1.7,maxWidth:"260px",marginBottom:"1.25rem"}}>
               {FOOTER_DATA.tagline}

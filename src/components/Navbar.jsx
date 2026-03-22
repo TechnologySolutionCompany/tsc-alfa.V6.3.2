@@ -43,7 +43,7 @@ export default function Navbar() {
           font-family:'Syne',sans-serif; font-weight:800; font-size:1rem;
           letter-spacing:-.01em; line-height:1;
         }
-        .nav-brand-tsc { color:#ffffff; }
+        .nav-brand-tsc { color:var(--text-primary); }
         .nav-brand-br  { color:var(--brand); }
         .nav-links-desktop { display:flex; gap:2.25rem; align-items:center; }
         .nav-link {

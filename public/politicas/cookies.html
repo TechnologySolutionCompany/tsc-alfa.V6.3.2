@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Política de Cookies da Technology Solution Company BR."/>
+  <title>Política de Cookies | TSC Brasil</title>
+  <link rel="icon" href="/logo.png" type="image/png"/>
+  <link rel="stylesheet" href="/politicas/politicas.css"/>
+</head>
+<body>
+
+<div id="cookie-banner" class="hidden">
+  <div style="font-size:1.75rem;flex-shrink:0;margin-top:.1rem">🍪</div>
+  <div style="flex:1;min-width:220px">
+    <div class="cb-title">Utilizamos cookies</div>
+    <div class="cb-text">Usamos cookies para melhorar sua experiência. Saiba mais em nossa <a href="/politicas/cookies.html">Política de Cookies</a>.</div>
+  </div>
+  <div class="cb-actions">
+    <button class="cb-btn cb-accept" onclick="acceptCookies()">Aceitar todos</button>
+    <button class="cb-btn cb-decline" onclick="declineCookies()">Recusar</button>
+    <button class="cb-btn cb-settings" onclick="openPrefs()">⚙ Preferências</button>
+  </div>
+</div>
+
+<div class="cookie-prefs-overlay hidden" id="prefsOverlay" onclick="closePrefsOutside(event)">
+  <div class="cookie-prefs-modal">
+    <div class="prefs-title">🍪 Preferências de Cookies</div>
+    <div class="pref-item"><div><div class="pref-name">Cookies Necessários</div><div class="pref-desc">Essenciais para o funcionamento. Não podem ser desativados.</div></div><label class="pref-toggle"><input type="checkbox" checked disabled/><span class="pref-slider"></span></label></div>
+    <div class="pref-item"><div><div class="pref-name">Cookies Funcionais</div><div class="pref-desc">Lembram suas preferências (tema, idioma).</div></div><label class="pref-toggle"><input type="checkbox" id="pref-func" checked/><span class="pref-slider"></span></label></div>
+    <div class="pref-item"><div><div class="pref-name">Cookies Analíticos</div><div class="pref-desc">Dados anonimizados para melhorias contínuas.</div></div><label class="pref-toggle"><input type="checkbox" id="pref-analytics"/><span class="pref-slider"></span></label></div>
+    <div class="pref-item"><div><div class="pref-name">Cookies de Marketing</div><div class="pref-desc">A TSC não exibe anúncios de terceiros atualmente.</div></div><label class="pref-toggle"><input type="checkbox" id="pref-marketing"/><span class="pref-slider"></span></label></div>
+    <div class="prefs-actions">
+      <button class="cb-btn cb-decline" onclick="closePrefs()">Cancelar</button>
+      <button class="cb-btn cb-accept" onclick="savePrefs()">Salvar preferências</button>
+    </div>
+  </div>
+</div>
+
+<header class="topbar">
+  <a href="/" class="topbar-brand">
+    <img src="/logo.png" alt="TSC Brasil" onerror="this.style.display='none'"/>
+    <span class="topbar-brand-tsc">TSC</span><span class="topbar-brand-br">Br</span>
+  </a>
+  <nav class="topbar-nav">
+    <a href="/">Início</a><a href="/servicos">Serviços</a><a href="/sobre">Sobre</a>
+    <a href="/politicas/privacidade.html">Privacidade</a>
+    <a href="/politicas/seguranca.html">Segurança</a>
+    <a href="/politicas/cookies.html" class="active">Cookies</a>
+  </nav>
+  <div class="topbar-right">
+    <button class="toggle" onclick="toggleTheme()" title="Alternar tema"><span class="toggle-knob" id="themeIcon">🌙</span></button>
+    <a href="/agendamento" class="btn-sm">Agendar Call</a>
+  </div>
+</header>
+
+<section class="pol-hero">
+  <span class="pol-eyebrow">Documentação Legal</span>
+  <h1>Política de <span style="background:linear-gradient(135deg,#10bfe1,#7dd4f0);-webkit-background-clip:text;-webkit-text-fill-color:transparent">Cookies</span></h1>
+  <p>Explicamos quais cookies utilizamos, para que servem e como você pode gerenciar suas preferências a qualquer momento.</p>
+  <div class="pol-meta">Última atualização: <strong>22 de Março de 2026</strong> &nbsp;·&nbsp; Versão <strong>6.3.2</strong></div>
+</section>
+
+<div class="pol-layout">
+  <aside class="pol-sidebar">
+    <div class="sidebar-card">
+      <p class="sidebar-title">Nesta página</p>
+      <a class="toc-link" href="#c1">1. O que são cookies?</a>
+      <a class="toc-link" href="#c2">2. Cookies que usamos</a>
+      <a class="toc-link" href="#c3">3. Cookies de terceiros</a>
+      <a class="toc-link" href="#c4">4. Duração</a>
+      <a class="toc-link" href="#c5">5. Gerenciar cookies</a>
+      <a class="toc-link" href="#c6">6. Seus direitos</a>
+      <a class="toc-link" href="#c7">7. Alterações</a>
+    </div>
+    <div class="sidebar-card">
+      <p class="sidebar-title">Outras políticas</p>
+      <a class="pol-nav-link" href="/politicas/privacidade.html"><span class="dot"></span>Privacidade</a>
+      <a class="pol-nav-link" href="/politicas/seguranca.html"><span class="dot"></span>Segurança</a>
+      <a class="pol-nav-link current" href="/politicas/cookies.html"><span class="dot"></span>Cookies</a>
+    </div>
+    <div class="sidebar-card">
+      <p class="sidebar-title">Minhas preferências</p>
+      <p style="font-size:.82rem;color:var(--text-secondary);line-height:1.6;margin-bottom:.875rem">Gerencie seus consentimentos a qualquer momento.</p>
+      <button class="btn-sm" onclick="openPrefs()" style="width:100%;text-align:center;display:block">⚙ Preferências de Cookies</button>
+    </div>
+  </aside>
+
+  <main class="pol-content">
+    <div class="notice-box"><strong>🍪 Transparência primeiro:</strong> Você tem o direito de saber o que coletamos e por quê. Esta política segue os requisitos da <strong>LGPD (Lei 13.709/2018)</strong> e das melhores práticas internacionais.</div>
+
+    <section class="pol-section" id="c1">
+      <h2><span class="sec-num">01</span> O que são cookies?</h2>
+      <p>Cookies são pequenos arquivos de texto armazenados no seu dispositivo quando você visita um site. Permitem que o site reconheça seu dispositivo em visitas futuras e lembre suas preferências.</p>
+      <p>Além dos cookies tradicionais, utilizamos <strong>localStorage</strong>, <strong>sessionStorage</strong> e <strong>pixels de rastreamento</strong>, todas reguladas por esta mesma política.</p>
+    </section>
+
+    <section class="pol-section" id="c2">
+      <h2><span class="sec-num">02</span> Cookies que utilizamos</h2>
+      <div class="pol-table-wrap">
+        <table class="pol-table">
+          <thead><tr><th>Categoria</th><th>Nome / Chave</th><th>Finalidade</th><th>Obrigatório</th></tr></thead>
+          <tbody>
+            <tr><td><span class="badge badge-green">Necessário</span></td><td><code>tsc-theme</code></td><td>Salva preferência de tema (dark/light)</td><td>Sim</td></tr>
+            <tr><td><span class="badge badge-green">Necessário</span></td><td><code>tsc-cookie-consent</code></td><td>Registra escolha de consentimento</td><td>Sim</td></tr>
+            <tr><td><span class="badge badge-blue">Funcional</span></td><td><code>tsc-lang</code></td><td>Preferência de idioma do usuário</td><td>Não</td></tr>
+            <tr><td><span class="badge badge-blue">Funcional</span></td><td><code>tsc-session</code></td><td>Sessão autenticada em portais de cliente</td><td>Não</td></tr>
+            <tr><td><span class="badge badge-amber">Analítico</span></td><td><code>_ga, _gid</code></td><td>Google Analytics — dados anonimizados</td><td>Não</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="rights-grid">
+        <div class="right-card"><div class="right-title">✅ Necessários</div><div class="right-desc">Essenciais para o funcionamento básico. Sempre ativos.</div></div>
+        <div class="right-card"><div class="right-title">⚙ Funcionais</div><div class="right-desc">Lembram configurações para uma experiência personalizada.</div></div>
+        <div class="right-card"><div class="right-title">📊 Analíticos</div><div class="right-desc">Coletam dados anonimizados para melhorias do site.</div></div>
+        <div class="right-card"><div class="right-title">📣 Marketing</div><div class="right-desc">A TSC não utiliza cookies de marketing atualmente.</div></div>
+      </div>
+    </section>
+
+    <section class="pol-section" id="c3">
+      <h2><span class="sec-num">03</span> Cookies de Terceiros</h2>
+      <div class="pol-table-wrap">
+        <table class="pol-table">
+          <thead><tr><th>Serviço</th><th>Finalidade</th><th>Política</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Google Analytics</strong></td><td>Análise de tráfego (dados anonimizados)</td><td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Ver política</a></td></tr>
+            <tr><td><strong>Google Fonts</strong></td><td>Carregamento de tipografias</td><td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Ver política</a></td></tr>
+            <tr><td><strong>WhatsApp (wa.me)</strong></td><td>Redirecionamento ao clicar</td><td><a href="https://www.whatsapp.com/legal/privacy-policy" target="_blank" rel="noopener">Ver política</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="pol-section" id="c4">
+      <h2><span class="sec-num">04</span> Duração dos Cookies</h2>
+      <ul>
+        <li><strong>Cookies de sessão:</strong> excluídos ao fechar o navegador.</li>
+        <li><strong>Cookies persistentes:</strong> preferências de tema têm validade de <strong>365 dias</strong>.</li>
+        <li><strong>Google Analytics:</strong> expiram em até <strong>2 anos</strong>.</li>
+      </ul>
+    </section>
+
+    <section class="pol-section" id="c5">
+      <h2><span class="sec-num">05</span> Como Gerenciar seus Cookies</h2>
+      <h3>Painel de preferências da TSC</h3>
+      <button class="btn-sm" onclick="openPrefs()" style="margin:.5rem 0 1.25rem;display:inline-flex;align-items:center;gap:.4rem">⚙ Abrir preferências de cookies</button>
+      <h3>Configurações do navegador</h3>
+      <ul>
+        <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener">Google Chrome</a></li>
+        <li><a href="https://support.mozilla.org/pt-BR/kb/gerencie-configuracoes-de-armazenamento-local-de-s" target="_blank" rel="noopener">Mozilla Firefox</a></li>
+        <li><a href="https://support.microsoft.com/pt-br/windows/excluir-e-gerenciar-cookies" target="_blank" rel="noopener">Microsoft Edge</a></li>
+        <li><a href="https://support.apple.com/pt-br/guide/safari/sfri11471/mac" target="_blank" rel="noopener">Apple Safari</a></li>
+      </ul>
+      <div class="notice-box" style="margin-top:1rem"><strong>⚠ Atenção:</strong> desativar todos os cookies pode impactar funcionalidades como preferência de tema e formulários.</div>
+    </section>
+
+    <section class="pol-section" id="c6">
+      <h2><span class="sec-num">06</span> Seus Direitos</h2>
+      <ul>
+        <li><strong>Revogar consentimento</strong> a qualquer momento pelo painel de preferências.</li>
+        <li><strong>Solicitar informações</strong> sobre dados coletados via cookies.</li>
+        <li><strong>Solicitar exclusão</strong> dos dados coletados por cookies analíticos.</li>
+      </ul>
+      <p>Para exercer seus direitos: <a href="mailto:techsocompany@gmail.com">techsocompany@gmail.com</a> ou <a href="/agendamento">formulário de contato</a>.</p>
+    </section>
+
+    <section class="pol-section" id="c7">
+      <h2><span class="sec-num">07</span> Alterações nesta Política</h2>
+      <p>Esta política pode ser atualizada quando introduzirmos novos serviços ou quando houver mudanças na legislação. Versão atual: <strong>1.0.0</strong> — publicada em 16 de Julho de 2025.</p>
+    </section>
+
+    <div class="pol-contact">
+      <h3>Dúvidas sobre cookies?</h3>
+      <div class="contact-grid">
+        <div><div class="contact-label">📧 E-mail</div><div class="contact-value"><a href="mailto:techsocompany@gmail.com">techsocompany@gmail.com</a></div></div>
+        <div><div class="contact-label">💬 WhatsApp</div><div class="contact-value"><a href="https://wa.me/5581997243724" target="_blank" rel="noopener">+55 (81) 99724-3724</a></div></div>
+        <div><div class="contact-label">📍 Endereço</div><div class="contact-value">Rua Gervásio Sales, Recife – PE</div></div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<footer class="pol-footer">
+  <span class="pol-footer-copy">© 2025 Technology Solution Company BR — Todos os direitos reservados.</span>
+  <div class="pol-footer-links">
+    <a href="/politicas/privacidade.html">Privacidade</a>
+    <a href="/politicas/seguranca.html">Segurança</a>
+    <a href="/politicas/cookies.html">Cookies</a>
+    <a href="/">Site principal</a>
+  </div>
+</footer>
+
+<script>
+  const root=document.documentElement,icon=document.getElementById('themeIcon');
+  const saved=localStorage.getItem('tsc-theme');
+  const auto=(new Date().getHours()>=6&&new Date().getHours()<18)?'light':'dark';
+  const theme=saved||auto; root.setAttribute('data-theme',theme); icon.textContent=theme==='dark'?'🌙':'☀️';
+  function toggleTheme(){const next=root.getAttribute('data-theme')==='dark'?'light':'dark';root.setAttribute('data-theme',next);icon.textContent=next==='dark'?'🌙':'☀️';localStorage.setItem('tsc-theme',next)}
+
+  const banner=document.getElementById('cookie-banner');
+  if(!localStorage.getItem('tsc-cookie-consent')) setTimeout(()=>banner.classList.remove('hidden'),800);
+  function acceptCookies(){localStorage.setItem('tsc-cookie-consent',JSON.stringify({necessary:true,functional:true,analytics:true,marketing:false,ts:Date.now()}));banner.classList.add('hidden')}
+  function declineCookies(){localStorage.setItem('tsc-cookie-consent',JSON.stringify({necessary:true,functional:false,analytics:false,marketing:false,ts:Date.now()}));banner.classList.add('hidden')}
+
+  const overlay=document.getElementById('prefsOverlay');
+  function openPrefs(){const c=JSON.parse(localStorage.getItem('tsc-cookie-consent')||'{}');document.getElementById('pref-func').checked=c.functional!==false;document.getElementById('pref-analytics').checked=c.analytics===true;document.getElementById('pref-marketing').checked=c.marketing===true;overlay.classList.remove('hidden');banner.classList.add('hidden')}
+  function closePrefs(){overlay.classList.add('hidden')}
+  function closePrefsOutside(e){if(e.target===overlay)closePrefs()}
+  function savePrefs(){localStorage.setItem('tsc-cookie-consent',JSON.stringify({necessary:true,functional:document.getElementById('pref-func').checked,analytics:document.getElementById('pref-analytics').checked,marketing:document.getElementById('pref-marketing').checked,ts:Date.now()}));closePrefs()}
+
+  document.querySelectorAll('.pol-section').forEach(s=>new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){document.querySelectorAll('.toc-link').forEach(l=>l.classList.remove('active'));const a=document.querySelector(`.toc-link[href="#${e.target.id}"]`);if(a)a.classList.add('active')}})},{rootMargin:'-20% 0px -60% 0px'}).observe(s));
+</script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap');
+
+/* ── TEMA ESCURO ─────────────────────────────────────────── */
+:root,
+[data-theme="dark"] {
+  --bg-base:        #0e1117;
+  --bg-surface:     #1a1f2e;
+  --bg-elevated:    #222840;
+  --bg-overlay:     rgba(14,17,23,0.88);
+  --brand:          #10bfe1;
+  --brand-dim:      #0d99b8;
+  --brand-glow:     rgba(16,191,225,0.14);
+  --brand-2:        #1f2334;
+  --text-primary:   #f0f2f8;
+  --text-secondary: #8b93a8;
+  --text-muted:     #4e5668;
+  --text-invert:    #0e1117;
+  --border:         rgba(255,255,255,0.07);
+  --border-strong:  rgba(255,255,255,0.13);
+  --border-brand:   rgba(16,191,225,0.28);
+  --shadow-sm:      0 2px 8px rgba(0,0,0,0.4);
+  --shadow-md:      0 8px 32px rgba(0,0,0,0.5);
+  --shadow-brand:   0 8px 32px rgba(16,191,225,0.22);
+  --card-bg:        rgba(26,31,46,0.75);
+  --card-border:    rgba(255,255,255,0.06);
+  --table-alt:      rgba(255,255,255,0.025);
+}
+
+/* ── TEMA CLARO ──────────────────────────────────────────── */
+[data-theme="light"] {
+  --bg-base:        #f4f6fb;
+  --bg-surface:     #ffffff;
+  --bg-elevated:    #eef1f8;
+  --bg-overlay:     rgba(244,246,251,0.92);
+  --brand:          #10bfe1;
+  --brand-dim:      #0d99b8;
+  --brand-glow:     rgba(16,191,225,0.10);
+  --brand-2:        #1f2334;
+  --text-primary:   #0e1117;
+  --text-secondary: #4a5468;
+  --text-muted:     #8b93a8;
+  --text-invert:    #f0f2f8;
+  --border:         rgba(0,0,0,0.07);
+  --border-strong:  rgba(0,0,0,0.13);
+  --border-brand:   rgba(16,191,225,0.30);
+  --shadow-sm:      0 2px 8px rgba(0,0,0,0.08);
+  --shadow-md:      0 8px 32px rgba(0,0,0,0.10);
+  --shadow-brand:   0 8px 32px rgba(16,191,225,0.18);
+  --card-bg:        rgba(255,255,255,0.92);
+  --card-border:    rgba(0,0,0,0.06);
+  --table-alt:      rgba(0,0,0,0.025);
+}
+
+/* ── RESET ───────────────────────────────────────────────── */
+*,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
+html { scroll-behavior:smooth; font-size:16px; }
+body {
+  font-family:'DM Sans',sans-serif;
+  background:var(--bg-base);
+  color:var(--text-primary);
+  line-height:1.65;
+  transition:background .35s ease, color .35s ease;
+  overflow-x:hidden;
+}
+h1,h2,h3,h4,h5 { font-family:'Syne',sans-serif; font-weight:700; line-height:1.1; color:var(--text-primary); }
+a { text-decoration:none; color:inherit; }
+img { max-width:100%; display:block; }
+button { cursor:pointer; font-family:inherit; }
+::-webkit-scrollbar { width:4px; }
+::-webkit-scrollbar-track { background:var(--bg-base); }
+::-webkit-scrollbar-thumb { background:var(--brand); border-radius:2px; }
+::selection { background:var(--brand); color:var(--text-invert); }
+
+.container { max-width:1160px; margin:0 auto; padding:0 clamp(1.25rem,5vw,3rem); }
+
+.grad-text {
+  background:linear-gradient(135deg, var(--brand) 0%, #7dd4f0 100%);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+
+.section-label {
+  font-size:.7rem; font-weight:700; letter-spacing:.18em;
+  text-transform:uppercase; color:var(--brand);
+  margin-bottom:.75rem; display:block;
+}
+
+.btn {
+  display:inline-flex; align-items:center; gap:.5rem;
+  font-family:'Syne',sans-serif; font-weight:600;
+  font-size:.82rem; letter-spacing:.06em; text-transform:uppercase;
+  border-radius:6px; padding:.8rem 1.8rem; border:none;
+  transition:all .25s ease; text-decoration:none; cursor:pointer;
+}
+.btn-brand {
+  background:var(--brand); color:var(--text-invert);
+  box-shadow:var(--shadow-brand);
+}
+.btn-brand:hover { background:var(--brand-dim); transform:translateY(-2px); box-shadow:0 12px 36px rgba(16,191,225,0.38); }
+.btn-ghost {
+  background:transparent; color:var(--brand);
+  border:1px solid var(--border-brand);
+}
+.btn-ghost:hover { background:var(--brand-glow); border-color:var(--brand); transform:translateY(-2px); }
+
+@keyframes fadeUp   { from{opacity:0;transform:translateY(28px)} to{opacity:1;transform:translateY(0)} }
+@keyframes float    { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
+@keyframes pulse-ring { 0%,100%{opacity:.35} 50%{opacity:1} }
+@keyframes orbit    { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }

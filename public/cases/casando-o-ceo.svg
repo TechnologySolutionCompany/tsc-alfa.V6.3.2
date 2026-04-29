@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">Casando o CEO</title>
+  <desc id="desc">Preview visual do projeto de lista de presentes Casando o CEO.</desc>
+  <defs>
+    <linearGradient id="hero" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#a8562d"/>
+      <stop offset="1" stop-color="#e58a55"/>
+    </linearGradient>
+    <linearGradient id="page" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff7ed"/>
+      <stop offset="1" stop-color="#fde7d3"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#page)"/>
+  <rect width="1280" height="86" fill="#b96337"/>
+  <g fill="#fff" font-family="Arial, Helvetica, sans-serif" font-weight="700">
+    <path d="M102 48 L122 28 L142 48 V72 H110 V52 H118 V64 H134 V48 Z" fill="none" stroke="#fff" stroke-width="4"/>
+    <text x="152" y="57" font-size="30">CasandooCeo</text>
+  </g>
+  <rect x="350" y="18" width="540" height="50" rx="6" fill="#fff7ed" stroke="#8c4526"/>
+  <text x="372" y="52" fill="#b96337" font-family="Arial, Helvetica, sans-serif" font-size="22">Buscar Casamento...</text>
+  <rect y="86" width="1280" height="250" fill="url(#hero)"/>
+  <text x="110" y="180" fill="#fff7ed" font-family="Arial, Helvetica, sans-serif" font-size="46" font-weight="800">Cadastre-se seu casamento e</text>
+  <text x="110" y="242" fill="#fff7ed" font-family="Arial, Helvetica, sans-serif" font-size="46" font-weight="800">crie uma pagina</text>
+  <rect x="110" y="275" width="210" height="60" rx="8" fill="#9a4e2b"/>
+  <text x="134" y="314" fill="#fff7ed" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700">Cadastre-se &gt;</text>
+  <rect x="765" y="120" width="390" height="150" rx="8" fill="#9a4e2b" opacity=".45"/>
+  <text x="820" y="205" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700">Cashback</text>
+  <text x="1000" y="205" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700">RSVP Online</text>
+  <line x1="960" y1="140" x2="960" y2="255" stroke="#7b3e23"/>
+  <g transform="translate(95 390)">
+    <text x="0" y="40" fill="#b96337" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="800">LISTA DE PRESENTES</text>
+    <g transform="translate(0 78)">
+      <rect width="230" height="210" rx="8" fill="#fff" stroke="#f3d0b8"/>
+      <rect width="230" height="135" rx="8" fill="#f7ece2"/>
+      <rect x="25" y="42" width="50" height="80" fill="#fff" stroke="#d9bdad"/>
+      <rect x="90" y="55" width="50" height="67" fill="#fff" stroke="#d9bdad"/>
+      <text x="62" y="180" fill="#b96337" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="800">R$ 1.237,90</text>
+    </g>
+    <g transform="translate(265 78)">
+      <rect width="230" height="210" rx="8" fill="#fff" stroke="#f3d0b8"/>
+      <rect width="230" height="135" rx="8" fill="#fde2d7"/>
+      <circle cx="75" cy="78" r="42" fill="#f9b4ac"/>
+      <rect x="125" y="42" width="50" height="80" rx="8" fill="#fff2eb"/>
+      <text x="70" y="180" fill="#b96337" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="800">R$ 113,90</text>
+    </g>
+    <g transform="translate(530 78)">
+      <rect width="230" height="210" rx="8" fill="#fff" stroke="#f3d0b8"/>
+      <rect width="230" height="135" rx="8" fill="#ead7bf"/>
+      <rect x="45" y="35" width="140" height="82" fill="#c68b4a"/>
+      <rect x="62" y="46" width="106" height="62" fill="#f7eee2"/>
+      <text x="68" y="180" fill="#b96337" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="800">R$ 778,90</text>
+    </g>
+    <rect x="800" y="78" width="205" height="210" rx="8" fill="#fff" stroke="#f3d0b8"/>
+    <text x="838" y="142" fill="#b96337" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="800">Funcionalidades</text>
+    <text x="838" y="178" fill="#b96337" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="800">Principais</text>
+  </g>
+</svg>

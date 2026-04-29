@@ -10,7 +10,6 @@ const PILLARS = [
 const STATS = [
   { value:7,  suffix:"+",  label:"Projetos Concluídos" },
   { value:23, suffix:"+",  label:"Clientes Satisfeitos" },
-  { value:6,  suffix:"",   label:"Team Atual" },
   { value:35, suffix:"", label:"Bate papo" },
 ];
 
@@ -133,7 +132,7 @@ export default function Home() {
           background:var(--bg-surface);
           border-top:1px solid var(--border);border-bottom:1px solid var(--border);
         }
-        .stats-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+        .stats-grid{display:grid;grid-template-columns:repeat(3,1fr)}
         @media(max-width:768px){.stats-grid{grid-template-columns:1fr 1fr}}
         .stats-divider{border-left:1px solid var(--border)}
         .about-section{padding:5rem clamp(1.25rem,5vw,3rem);border-top:1px solid var(--border)}
@@ -267,7 +266,7 @@ export default function Home() {
                 Saiba mais sobre a <span className="grad-text">TSCBr</span>
               </h2>
               <p style={{fontSize:".95rem",color:"var(--text-secondary)",lineHeight:1.8,marginBottom:"1rem"}}>
-                Fundada em 09 de janeiro de 2025, a Technology Solution Company BR nasceu da união entre visão estratégica e paixão por tecnologia, liderada por <strong style={{color:"var(--text-primary)"}}>Estevão Miguel dos Santos</strong> com o apoio de <strong style={{color:"var(--text-primary)"}}>Wanderson Vasconcelos Barbosa de Aguiar</strong>.
+                Fundada em 09 de janeiro de 2025, a Technology Solution Company BR nasceu da união entre visão estratégica e paixão por tecnologia, liderada por <strong style={{color:"var(--text-primary)"}}>Estevão Miguel dos Santos</strong>, CEO e criador, com o apoio de <strong style={{color:"var(--text-primary)"}}>Wanderson Vasconcelos Barbosa de Aguiar</strong>, CFO e sócio financeiro.
               </p>
               <p style={{fontSize:".95rem",color:"var(--text-secondary)",lineHeight:1.8,marginBottom:"1rem"}}>
                 Desenvolvemos estratégias digitais que se tornam o motor para o crescimento de negócios. Transformamos suas ideias em realidade, otimizando processos e impulsionando resultados.
@@ -279,7 +278,7 @@ export default function Home() {
               {[
                 {year:"Jan 2025",label:"Fundação da TSC Brasil",color:"#10bfe1"},
                 {year:"Mar 2025",label:"Primeiros projetos entregues",color:"#7c3aed"},
-                {year:"Jun 2025",label:"Expansão para 6 integrantes",color:"#10b981"},
+                {year:"Jun 2025",label:"Evolução dos processos internos",color:"#10b981"},
                 {year:"2026+",  label:"Crescimento contínuo",color:"#f59e0b"},
               ].map((item,i)=>(
                 <div key={i} className="tl-item">
@@ -303,7 +302,7 @@ export default function Home() {
               Vamos construir algo <span className="grad-text">incrível</span> juntos
             </h2>
             <p style={{fontSize:".95rem",color:"var(--text-secondary)",lineHeight:1.7,marginBottom:"2rem"}}>
-              Entre em contato com a equipe TSC e descubra como a tecnologia certa pode transformar seu negócio.
+              Entre em contato com a diretoria da TSC e descubra como a tecnologia certa pode transformar seu negócio.
             </p>
             <div className="cta-btns">
               <a href="/agendamento" className="btn btn-brand">Agendar Call →</a>

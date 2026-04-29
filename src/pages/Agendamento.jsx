@@ -152,7 +152,7 @@ export default function Agendamento() {
                 <div className="success-msg">
                   <div style={{fontSize:"3rem",marginBottom:"1rem"}}>✅</div>
                   <div style={{fontFamily:"'Syne',sans-serif",fontSize:"1.3rem",fontWeight:700,marginBottom:".5rem"}}>Mensagem enviada!</div>
-                  <p style={{fontSize:".9rem",color:"var(--text-secondary)",lineHeight:1.65}}>O WhatsApp foi aberto com sua mensagem. Em breve nossa equipe entrará em contato!</p>
+                  <p style={{fontSize:".9rem",color:"var(--text-secondary)",lineHeight:1.65}}>O WhatsApp foi aberto com sua mensagem. Em breve nosso atendimento entrará em contato!</p>
                 </div>
               ):(
                 <>
